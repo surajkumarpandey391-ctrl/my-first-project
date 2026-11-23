@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduTrack | Gola Polytechnic, Gola — Smart Student Management</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- LANDING PAGE -->
+  <div id="landing-page" class="flex-1 flex flex-col">
+    <header class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        <a href="#hero" class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-base shadow-sm">GP</div>
+          <div>
+            <span class="font-bold text-slate-900 text-base sm:text-lg block leading-none">EduTrack</span>
+            <span class="text-[11px] text-slate-500 font-medium">Gola Polytechnic, Gola</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="#features" class="hover:text-indigo-600 transition">Features</a>
+          <a href="#platform" class="hover:text-indigo-600 transition">Platform</a>
+          <a href="#branches" class="hover:text-indigo-600 transition">Branches</a>
+          <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+        </nav>
+        <button id="btnNavPortal" type="button" class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 shadow-sm transition">Open Portal</button>
+      </div>
+    </header>
+
+    <section id="hero" class="bg-gradient-to-b from-indigo-50/70 via-white to-white py-14 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 mb-5">
+          Smart Polytechnic Management &middot; Gola Polytechnic, Gola
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
+          Polytechnic Management made <span class="text-indigo-600">Smart, Simple &amp; Efficient</span>
+        </h1>
+        <p class="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+          A complete full-stack platform giving students, faculty, and administration at Gola Polytechnic real-time clarity on attendance, semester grades, and academic performance.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <button id="btnHeroPortal" type="button" class="px-6 py-3 text-sm sm:text-base font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 shadow-md transition">Launch Live Dashboard &rarr;</button>
+          <a href="#features" class="px-6 py-3 text-sm sm:text-base font-semibold text-slate-700 bg-white border border-slate-300 rounded-xl hover:bg-slate-50 transition">Explore Features</a>
+        </div>
+        <div class="mt-12 pt-8 border-t border-slate-200/80">
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Built for Diploma Branches (Semester 1 &ndash; 6)</p>
+          <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-sm font-semibold text-slate-600">
+            <span class="px-4 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">CSE</span>
+            <span class="px-4 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">Civil</span>
+            <span class="px-4 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">Mechanical</span>
+            <span class="px-4 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">Electrical</span>
+            <span class="px-4 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">ECE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-14 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Why EduTrack at Gola Polytechnic?</h2>
+          <p class="mt-2 text-sm sm:text-base text-slate-600">Reduce paperwork, track semester attendance, and manage diploma records in one place.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold mb-4">01</div>
+            <h3 class="text-base font-bold text-slate-900">Real-Time Attendance Tracking</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Mark daily Present, Late, or Absent status by branch and automatically flag students below 75%.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold mb-4">02</div>
+            <h3 class="text-base font-bold text-slate-900">Internal &amp; External Grading</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Enter 40-mark internal and 60-mark external scores to auto-calculate letter grades and CGPA.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold mb-4">03</div>
+            <h3 class="text-base font-bold text-slate-900">Branch &amp; Semester Analytics</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Live Doughnut and Bar charts showing student distribution and average CGPA across all 5 branches.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold mb-4">04</div>
+            <h3 class="text-base font-bold text-slate-900">Student Directory &amp; Profiles</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Search by Roll No, name, or email, filter by Semester 1&ndash;6, and view complete student cards.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold mb-4">05</div>
+            <h3 class="text-base font-bold text-slate-900">Flask + SQLite Backend</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Persistent REST API backed by a local SQLite database for reliable CRUD operations.</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold mb-4">06</div>
+            <h3 class="text-base font-bold text-slate-900">One-Click CSV Reports</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Export clean student records, attendance percentages, and CGPA reports to CSV anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform" class="py-14 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">A Modern Experience for Everyone</h2>
+          <p class="mt-2 text-sm text-slate-600">Designed for every stakeholder at Gola Polytechnic, Gola</p>
+        </div>
+        <div class="flex justify-center gap-2 mb-8">
+          <button type="button" data-role="students" class="role-tab active px-4 py-2 rounded-lg text-sm font-semibold bg-white border border-slate-200 text-slate-700 transition">Students</button>
+          <button type="button" data-role="faculty" class="role-tab px-4 py-2 rounded-lg text-sm font-semibold bg-white border border-slate-200 text-slate-700 transition">Faculty</button>
+          <button type="button" data-role="admin" class="role-tab px-4 py-2 rounded-lg text-sm font-semibold bg-white border border-slate-200 text-slate-700 transition">Admin</button>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-3 max-w-xl">
+            <h3 id="roleTitle" class="text-xl font-bold text-slate-900">Student Academic Clarity</h3>
+            <p id="roleDesc" class="text-sm text-slate-600">Track semester-wise attendance, internal/external marks, and CGPA standing in real time.</p>
+            <ul id="rolePoints" class="space-y-1.5 text-sm text-slate-700">
+              <li>&bull; Instant visibility into 75% attendance threshold</li>
+              <li>&bull; Clear breakdown of Internal (40) + External (60) marks</li>
+              <li>&bull; Quick profile view with Roll No and Branch status</li>
+            </ul>
+          </div>
+          <button id="btnRolePortal" type="button" class="shrink-0 px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition">Open Portal View</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="branches" class="py-12 bg-indigo-600 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><p class="text-3xl font-extrabold">5</p><p class="text-xs sm:text-sm text-indigo-100 mt-1">Diploma Branches</p></div>
+        <div><p class="text-3xl font-extrabold">1 &ndash; 6</p><p class="text-xs sm:text-sm text-indigo-100 mt-1">Semesters Covered</p></div>
+        <div><p class="text-3xl font-extrabold">SQLite</p><p class="text-xs sm:text-sm text-indigo-100 mt-1">Flask REST Backend</p></div>
+        <div><p class="text-3xl font-extrabold">100%</p><p class="text-xs sm:text-sm text-indigo-100 mt-1">Real-Time Sync</p></div>
+      </div>
+    </section>
+
+    <!-- Dark 5-Column Footer + Stay Updated -->
+    <footer id="contact" class="bg-[#0b1120] text-slate-300 pt-14 pb-8 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 pb-12 border-b border-slate-800">
+          <div class="lg:col-span-2 space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base">GP</div>
+              <span class="font-bold text-white text-lg">EduTrack</span>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed max-w-xs">Empowering Students with Intelligence. Smart polytechnic management for real student growth at Gola Polytechnic, Gola.</p>
+            <div class="space-y-2 text-sm text-slate-400 pt-1">
+              <p>office@golapolytechnic.edu.in</p>
+              <p>+91 62*****132</p>
+              <p>Gola Polytechnic, Gola</p>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Platform</h4>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li><a href="#features" class="hover:text-white">Features</a></li>
+              <li><button type="button" data-footer-tab="dashboard" class="footer-portal-link hover:text-white">Live Dashboard</button></li>
+              <li><button type="button" data-footer-tab="students" class="footer-portal-link hover:text-white">Student Directory</button></li>
+              <li><button type="button" data-footer-tab="attendance" class="footer-portal-link hover:text-white">Attendance Tracker</button></li>
+              <li><button type="button" data-footer-tab="grades" class="footer-portal-link hover:text-white">Grades &amp; CGPA</button></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Branches</h4>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li><a href="#branches" class="hover:text-white">CSE</a></li>
+              <li><a href="#branches" class="hover:text-white">Civil</a></li>
+              <li><a href="#branches" class="hover:text-white">Mechanical</a></li>
+              <li><a href="#branches" class="hover:text-white">Electrical</a></li>
+              <li><a href="#branches" class="hover:text-white">ECE</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Resources</h4>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li><a href="#platform" class="hover:text-white">Stakeholder Guide</a></li>
+              <li><a href="#features" class="hover:text-white">Flask REST API</a></li>
+              <li><a href="#features" class="hover:text-white">SQLite Database</a></li>
+              <li><button type="button" data-footer-tab="students" class="footer-portal-link hover:text-white">CSV Export</button></li>
+              <li><a href="#hero" class="hover:text-white">Semester 1 &ndash; 6</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Institution</h4>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li><a href="#hero" class="hover:text-white">Gola Polytechnic</a></li>
+              <li><a href="#platform" class="hover:text-white">Faculty Portal</a></li>
+              <li><a href="#platform" class="hover:text-white">Student Portal</a></li>
+              <li><a href="#platform" class="hover:text-white">Admin Console</a></li>
+              <li><a href="#contact" class="hover:text-white">Contact Office</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="py-10 border-b border-slate-800 text-center">
+          <h4 class="text-base font-semibold text-white">Stay Updated</h4>
+          <p class="text-sm text-slate-400 mt-1 mb-5">Get the latest updates on college notices, semester schedules, and EduTrack features</p>
+          <form id="newsletterForm" class="flex flex-col sm:flex-row items-center justify-center gap-2.5 max-w-md mx-auto">
+            <input id="newsletterEmail" type="email" required placeholder="Enter your email" class="w-full sm:flex-1 px-4 py-2.5 text-sm text-white bg-slate-800/80 border border-slate-700 rounded-lg placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <button type="submit" class="w-full sm:w-auto px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition">Subscribe</button>
+          </form>
+        </div>
+
+        <div class="pt-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+          <p>&copy; 2026 EduTrack &middot; Gola Polytechnic, Gola &mdash; Empowering Students with Intelligence.</p>
+          <p>Diploma Management Portal (Sem 1 &ndash; 6)</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- WORKING PORTAL VIEW -->
+  <div id="portal-page" class="hidden flex-1 flex flex-col">
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap items-center justify-between gap-3 py-3.5">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">GP</div>
+            <div>
+              <h1 class="text-lg sm:text-xl font-bold text-slate-900 leading-tight">Gola Polytechnic, Gola</h1>
+              <div class="flex items-center gap-2">
+                <p class="text-xs text-slate-500">EduTrack &middot; Student Management Portal</p>
+                <span id="backendBadge" class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Checking API...</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button id="btnBackHome" type="button" class="px-3 py-2 text-xs sm:text-sm font-medium text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200 transition">&larr; Home</button>
+            <button id="btnExportCsv" type="button" class="px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition">Export CSV</button>
+            <button id="btnResetDemo" type="button" class="px-3 py-2 text-xs sm:text-sm font-medium text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200 transition">Reset Demo</button>
+            <button id="btnOpenAddModal" type="button" class="px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 shadow-sm transition">+ Add Student</button>
+          </div>
+        </div>
+        <nav class="flex items-center gap-1.5 overflow-x-auto pb-3">
+          <button type="button" data-tab="dashboard" class="tab-btn active px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Dashboard</button>
+          <button type="button" data-tab="students" class="tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Students</button>
+          <button type="button" data-tab="attendance" class="tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Attendance</button>
+          <button type="button" data-tab="grades" class="tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Grades</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <section id="view-dashboard" class="space-y-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm"><p class="text-xs font-medium text-slate-500 uppercase">Total Students</p><p id="kpiTotal" class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">0</p><p id="kpiDepts" class="mt-1 text-xs text-slate-500">Across 0 branches</p></div>
+          <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm"><p class="text-xs font-medium text-slate-500 uppercase">Active Enrolled</p><p id="kpiActive" class="mt-2 text-2xl sm:text-3xl font-bold text-emerald-600">0</p><p id="kpiActivePct" class="mt-1 text-xs text-slate-500">0% of total</p></div>
+          <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm"><p class="text-xs font-medium text-slate-500 uppercase">Average CGPA</p><p id="kpiCgpa" class="mt-2 text-2xl sm:text-3xl font-bold text-indigo-600">0.00</p><p class="mt-1 text-xs text-slate-500">Out of 10.0 scale</p></div>
+          <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm"><p class="text-xs font-medium text-slate-500 uppercase">Avg Attendance</p><p id="kpiAttendance" class="mt-2 text-2xl sm:text-3xl font-bold text-amber-600">0%</p><p id="kpiLowAtt" class="mt-1 text-xs text-slate-500">0 below 75%</p></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm"><h2 class="text-base font-semibold text-slate-800 mb-4">Students by Branch</h2><div class="relative h-72"><canvas id="deptChart"></canvas></div></div>
+          <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm"><h2 class="text-base font-semibold text-slate-800 mb-4">Average CGPA by Branch</h2><div class="relative h-72"><canvas id="cgpaChart"></canvas></div></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm"><h2 class="text-base font-semibold text-slate-800 mb-3">Top Performers (CGPA)</h2><div id="topPerformersList" class="divide-y divide-slate-100"></div></div>
+          <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm"><h2 class="text-base font-semibold text-slate-800 mb-3">Low Attendance Alert (&lt; 75%)</h2><div id="lowAttendanceList" class="divide-y divide-slate-100"></div></div>
+        </div>
+      </section>
+
+      <section id="view-students" class="hidden space-y-5">
+        <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <input id="searchInput" type="text" placeholder="Search Name, Roll No, Email..." class="px-3 py-2 text-sm border border-slate-300 rounded-lg" />
+          <select id="filterDept" class="px-3 py-2 text-sm border border-slate-300 rounded-lg bg-white"><option value="All">All Branches</option><option value="CSE">CSE</option><option value="Civil">Civil</option><option value="Mechanical">Mechanical</option><option value="Electrical">Electrical</option><option value="ECE">ECE</option></select>
+          <select id="filterSem" class="px-3 py-2 text-sm border border-slate-300 rounded-lg bg-white"><option value="All">All Semesters</option><option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option><option value="5">Semester 5</option><option value="6">Semester 6</option></select>
+          <select id="filterStatus" class="px-3 py-2 text-sm border border-slate-300 rounded-lg bg-white"><option value="All">All Statuses</option><option value="Active">Active</option><option value="On Leave">On Leave</option><option value="Graduated">Graduated</option></select>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-slate-200 flex items-center justify-between"><h2 class="text-base font-semibold text-slate-800">Student Directory</h2><span id="studentCountBadge" class="text-xs font-medium px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700">0 students</span></div>
+          <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase"><th class="py-3 px-4">Roll No</th><th class="py-3 px-4">Student</th><th class="py-3 px-4">Branch</th><th class="py-3 px-4">Sem</th><th class="py-3 px-4">Attendance</th><th class="py-3 px-4">CGPA</th><th class="py-3 px-4">Status</th><th class="py-3 px-4 text-right">Actions</th></tr></thead><tbody id="studentsTableBody" class="divide-y divide-slate-100 text-sm"></tbody></table></div>
+          <div id="emptyStudentsState" class="hidden py-10 text-center"><p class="text-slate-500 text-sm">No students match your filters.</p><button id="btnClearFilters" type="button" class="mt-2 px-3 py-1.5 text-xs font-medium text-indigo-600 bg-indigo-50 rounded-lg">Clear Filters</button></div>
+        </div>
+      </section>
+
+      <section id="view-attendance" class="hidden space-y-5">
+        <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap gap-3"><input id="attDate" type="date" class="px-3 py-2 text-sm border border-slate-300 rounded-lg" /><select id="attDeptFilter" class="px-3 py-2 text-sm border border-slate-300 rounded-lg bg-white"><option value="All">All Branches</option><option value="CSE">CSE</option><option value="Civil">Civil</option><option value="Mechanical">Mechanical</option><option value="Electrical">Electrical</option><option value="ECE">ECE</option></select></div>
+          <div class="flex gap-2"><button id="btnMarkAllPresent" type="button" class="px-3.5 py-2 text-xs sm:text-sm font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg">Mark All Present</button><button id="btnSaveAttendance" type="button" class="px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-600 rounded-lg">Save Attendance</button></div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-slate-200 flex items-center justify-between"><h2 class="text-base font-semibold text-slate-800">Daily Attendance Sheet</h2><span id="attSummaryText" class="text-xs text-slate-500"></span></div>
+          <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase"><th class="py-3 px-4">Roll No</th><th class="py-3 px-4">Student</th><th class="py-3 px-4">Branch</th><th class="py-3 px-4">Overall %</th><th class="py-3 px-4 text-right">Today's Status</th></tr></thead><tbody id="attendanceTableBody" class="divide-y divide-slate-100 text-sm"></tbody></table></div>
+        </div>
+      </section>
+
+      <section id="view-grades" class="hidden space-y-5">
+        <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm flex items-center justify-between"><h2 class="text-base font-semibold text-slate-800">Academic Grades &amp; CGPA</h2><select id="gradesDeptFilter" class="px-3 py-2 text-sm border border-slate-300 rounded-lg bg-white"><option value="All">All Branches</option><option value="CSE">CSE</option><option value="Civil">Civil</option><option value="Mechanical">Mechanical</option><option value="Electrical">Electrical</option><option value="ECE">ECE</option></select></div>
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase"><th class="py-3 px-4">Roll No</th><th class="py-3 px-4">Student</th><th class="py-3 px-4">Branch</th><th class="py-3 px-4">Internal (40)</th><th class="py-3 px-4">External (60)</th><th class="py-3 px-4">Total</th><th class="py-3 px-4">Grade</th><th class="py-3 px-4">CGPA</th></tr></thead><tbody id="gradesTableBody" class="divide-y divide-slate-100 text-sm"></tbody></table></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modals & Toast -->
+  <div id="studentModal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl max-w-lg w-full overflow-hidden">
+      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between"><h3 id="modalTitle" class="text-lg font-semibold">Add New Student</h3><button id="btnCloseModal" type="button" class="text-slate-400 hover:text-slate-600 text-xl">&times;</button></div>
+      <form id="studentForm" class="p-6 space-y-4">
+        <input type="hidden" id="editStudentId" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input id="fRoll" type="text" required placeholder="Roll No (e.g. GP-CSE-01)" class="px-3 py-2 text-sm border rounded-lg" />
+          <input id="fName" type="text" required placeholder="Full Name" class="px-3 py-2 text-sm border rounded-lg" />
+          <input id="fEmail" type="email" required placeholder="Email Address" class="px-3 py-2 text-sm border rounded-lg" />
+          <input id="fPhone" type="tel" placeholder="Phone (+91...)" class="px-3 py-2 text-sm border rounded-lg" />
+          <select id="fDept" class="px-3 py-2 text-sm border rounded-lg bg-white"><option value="CSE">CSE</option><option value="Civil">Civil</option><option value="Mechanical">Mechanical</option><option value="Electrical">Electrical</option><option value="ECE">ECE</option></select>
+          <select id="fSem" class="px-3 py-2 text-sm border rounded-lg bg-white"><option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option><option value="5">Semester 5</option><option value="6">Semester 6</option></select>
+          <input id="fAttendance" type="number" min="0" max="100" required value="85" class="px-3 py-2 text-sm border rounded-lg" />
+          <input id="fCgpa" type="number" min="0" max="10" step="0.1" required value="8.2" class="px-3 py-2 text-sm border rounded-lg" />
+          <select id="fStatus" class="sm:col-span-2 px-3 py-2 text-sm border rounded-lg bg-white"><option value="Active">Active</option><option value="On Leave">On Leave</option><option value="Graduated">Graduated</option></select>
+        </div>
+        <div class="pt-3 flex justify-end gap-2 border-t"><button id="btnCancelModal" type="button" class="px-4 py-2 text-sm bg-slate-100 rounded-lg">Cancel</button><button type="submit" class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-lg">Save Student</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="profileModal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl max-w-md w-full overflow-hidden">
+      <div class="bg-indigo-600 px-6 py-5 text-white flex items-center justify-between"><div class="flex items-center gap-3"><div id="pAvatar" class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg"></div><div><h3 id="pName" class="text-lg font-bold"></h3><p id="pRoll" class="text-xs text-indigo-100"></p></div></div><button id="btnCloseProfile" type="button" class="text-white/80 hover:text-white text-xl">&times;</button></div>
+      <div class="p-6 space-y-2.5 text-sm">
+        <div class="flex justify-between py-1 border-b"><span class="text-slate-500">Branch</span><span id="pDept" class="font-medium"></span></div>
+        <div class="flex justify-between py-1 border-b"><span class="text-slate-500">Semester</span><span id="pSem" class="font-medium"></span></div>
+        <div class="flex justify-between py-1 border-b"><span class="text-slate-500">Email</span><span id="pEmail" class="font-medium"></span></div>
+        <div class="flex justify-between py-1 border-b"><span class="text-slate-500">Phone</span><span id="pPhone" class="font-medium"></span></div>
+        <div class="flex justify-between py-1 border-b"><span class="text-slate-500">Attendance</span><span id="pAtt" class="font-semibold"></span></div>
+        <div class="flex justify-between py-1 border-b"><span class="text-slate-500">CGPA</span><span id="pCgpa" class="font-semibold text-indigo-600"></span></div>
+        <div class="flex justify-between py-1"><span class="text-slate-500">Status</span><span id="pStatus" class="font-medium"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="confirmModal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6 space-y-4"><h3 id="confirmTitle" class="text-base font-semibold">Confirm Action</h3><p id="confirmMessage" class="text-sm text-slate-600"></p><div class="flex justify-end gap-2"><button id="btnConfirmCancel" type="button" class="px-4 py-2 text-sm bg-slate-100 rounded-lg">Cancel</button><button id="btnConfirmOk" type="button" class="px-4 py-2 text-sm font-semibold text-white bg-rose-600 rounded-lg">Confirm</button></div></div>
+  </div>
+  <div id="toast" class="hidden fixed bottom-5 right-5 z-50 px-4 py-3 rounded-xl bg-slate-900 text-white text-sm font-medium shadow-lg"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
